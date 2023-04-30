@@ -42,4 +42,3 @@ class News(models.Model):
         return self.title
     
 
-
