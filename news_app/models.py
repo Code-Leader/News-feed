@@ -15,7 +15,7 @@ class News(models.Model):
 
     class Status(models.TextChoices):
         Draft = "DF", "Draft"
-        Publish = "PB", "Publish"
+        Published = "PB", "Published"
 
     title = models.CharField(max_length=250)
     slug = models.SlugField(max_length=250)
