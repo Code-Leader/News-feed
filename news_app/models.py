@@ -1,6 +1,9 @@
 from django.utils import timezone
-from .menagres import PublishMeneger
 from django.db import models
+
+class PublishMeneger(models.Manager):
+    def get_queryset(self):
+        return super().get_queryset().filter(status=News.Status.Published)
 
 class Category(models.Model):
     name = models.CharField(max_length=150)
@@ -29,7 +32,7 @@ class News(models.Model):
                                default=Status.Draft
                                )
     objects = models.Manager()
-    
+    published = PublishMeneger()
     
 
     class Meta:
