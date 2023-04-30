@@ -43,4 +43,3 @@ class News(models.Model):
     
 
 
-
