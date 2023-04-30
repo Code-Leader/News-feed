@@ -1,5 +1,5 @@
 from django.utils import timezone
-
+from .menagres import PublishMeneger
 from django.db import models
 
 class Category(models.Model):
@@ -28,6 +28,8 @@ class News(models.Model):
                                choices=Status.choices,
                                default=Status.Draft
                                )
+    objects = models.Manager()
+    
     
 
     class Meta:
