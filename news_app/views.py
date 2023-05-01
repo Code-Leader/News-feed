@@ -7,3 +7,4 @@ def news_list(request):
         "news_list": news_list
     }
     return render(request, 'news/news_list.html', context)
+
