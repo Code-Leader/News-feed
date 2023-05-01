@@ -2,6 +2,7 @@ from django.shortcuts import render, get_list_or_404
 from .models import News, Category
 
 def news_list(request):
+    # news_list = News.objects.filter(status=News.Status.Published)
     news_list = News.published.all()
     context = {
         "news_list": news_list
