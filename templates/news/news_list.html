@@ -10,7 +10,11 @@
     <h1>All news list</h1>
     
     {% for news in news_list %}
-        <li>{{news.title}}</li>
+        <a href="{% url 'news_diteal_page' news.pk%}">
+        
+            <li>{{news.title}}</li>
+        </a>
+            
     {% endfor %}
         
     
