@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_list_or_404
 from .models import News, Category
 
 def news_list(request):
@@ -8,3 +8,7 @@ def news_list(request):
     }
     return render(request, 'news/news_list.html', context)
 
+
+def news_detail(request, pk):
+    news = get_list_or_404(News, id=pk)
+    
