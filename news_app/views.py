@@ -10,5 +10,10 @@ def news_list(request):
     return render(request, 'news/news_list.html', context)
 
 
-# def news_detail(request, pk):
-#     news = get_list_or_404(News, id=pk)
+def news_detail(request, pk):
+    news = get_list_or_404(News, id=pk, status=News.Status.Published)
+
+    context = {
+        "news": news
+    }
+    return render(request, 'news/news_detail.html', context)
