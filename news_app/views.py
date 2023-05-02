@@ -17,3 +17,4 @@ def news_detail(request, id):
         "news": news
     }
     return render(request, 'news/news_detail.html', context)
+
