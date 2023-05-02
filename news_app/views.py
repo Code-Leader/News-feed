@@ -28,4 +28,3 @@ def news_detail(request, id):
 
 
 
-
