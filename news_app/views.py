@@ -19,4 +19,3 @@ def news_detail(request, id):
     return render(request, 'news/news_detail.html', context)
 
 
-
