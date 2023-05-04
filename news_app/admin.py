@@ -19,4 +19,3 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 
-
