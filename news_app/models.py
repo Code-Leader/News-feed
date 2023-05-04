@@ -12,6 +12,7 @@ class Category(models.Model):
         return self.name
 
 class News(models.Model):
+    
 
     class Status(models.TextChoices):
         Draft = "DF", "Draft"
